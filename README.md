@@ -23,15 +23,6 @@ Ambil ongoing + complete dari halaman depan.
 const { ongoing, complete } = await getHome();
 ```
 
-Return:
-
-```
-ongoing:  [{ title, slug, episode, day, date, cover }]
-complete: [{ title, slug, episode, day, date, cover }]
-```
-
-Contoh nilai:
-
 ```json
 {
   "title": "Neko to Ryuu",
@@ -45,79 +36,104 @@ Contoh nilai:
 
 ### 2. `getList(type)`
 
-Arsip penuh.
+Arsip penuh. `type`: `'ongoing'` | `'complete'`. Default `'ongoing'`.
 
 ```js
 const ongoing = await getList('ongoing');
 const complete = await getList('complete');
 ```
 
-`type` hanya menerima `'ongoing'` atau `'complete'`. Default `'ongoing'`.
+Item sama seperti `getHome()`.
 
 ### 3. `search(query)`
 
 Cari anime.
 
 ```js
-const hasil = await search('naruto');
+const hasil = await search('slime');
 ```
 
-Return:
-
 ```json
-[
-  {
-    "title": "Boruto: Naruto Next Generations Subtitle Indonesia",
-    "slug": "borot-sub-indo",
-    "cover": "https://otakudesu.blog/wp-content/uploads/2020/05/Boruto-Sub-Indo.jpg",
-    "genres": "Action, Adventure, Martial Arts, Shounen, Super Power",
-    "status": "Drop",
-    "rating": "6.15"
-  }
-]
+{
+  "title": "Tensei shitara Slime Datta Ken Season 4 Subtitle Indonesia",
+  "slug": "slime-s4-sub-indo",
+  "cover": "https://otakudesu.blog/wp-content/uploads/2026/04/156389.jpg",
+  "genres": "Action, Comedy, Fantasy, Isekai, Reincarnation, Shounen",
+  "status": "Ongoing",
+  "rating": "7.69"
+}
 ```
 
 ### 4. `getAnime(slug)`
 
-Detail anime + daftar episode.
+Detail anime + daftar episode. `slug` dari `getHome()` / `search()`.
 
 ```js
 const anime = await getAnime('slime-s4-sub-indo');
 ```
 
-Return:
-
-```
+```json
 {
-  info,      // Judul, Japanese, Skor, Produser, Tipe, Status, Durasi, Tanggal Rilis, Studio
-  genres,    // ["Action", "Comedy", ...]
-  cover,
-  episodes,  // [{ slug, title, date }]
-  batch      // [{ url, label }]
+  "info": {
+    "Judul": "Tensei shitara Slime Datta Ken Season 4",
+    "Japanese": "転生したらスライムだった件 第4期",
+    "Skor": "7.69",
+    "Produser": "Bandai Namco Filmworks",
+    "Tipe": "TV",
+    "Status": "Ongoing",
+    "Total Episode": "Unknown",
+    "Durasi": "24 min.",
+    "Tanggal Rilis": "Apr 03, 2026",
+    "Studio": "8bit",
+    "Genre": "Action, Comedy, Fantasy, Isekai, Reincarnation, Shounen"
+  },
+  "genres": ["Action", "Comedy", "Fantasy", "Isekai", "Reincarnation", "Shounen"],
+  "cover": "https://otakudesu.blog/wp-content/uploads/2026/04/156389.jpg",
+  "episodes": [
+    {
+      "slug": "tenslem-s4-episode-21-sub-indo",
+      "title": "Tensei shitara Slime Datta Ken Season 4 Episode 21 Subtitle Indonesia",
+      "date": "4 September,2026"
+    }
+  ],
+  "batch": []
 }
 ```
 
-`slug` diambil dari field `slug` hasil `getHome()` / `search()`. Contoh yang valid: `slime-s4-sub-indo`, `borot-sub-indo`.
-
 ### 5. `getEpisode(slug)`
 
-Data nonton dan download.
+Data nonton dan download. `slug` dari `anime.episodes[].slug`.
 
 ```js
 const ep = await getEpisode('tenslem-s4-episode-21-sub-indo');
 ```
 
-Return:
-
-```
+```json
 {
-  title,
-  video,       // MP4 langsung, contoh: https://cdn.odcloud.net/anime/....mp4
-  iframe,      // embed desustream, fallback kalau video kosong
-  prev,        // slug episode sebelumnya
-  servers,     // [{ quality, label, payload }] — payload dipakai resolveMirror
-  downloads,   // [{ format, size, links: [{ host, url }] }]
-  allEpisodes  // [{ slug, label }]
+  "title": "Tensei shitara Slime Datta Ken Season 4 Episode 21 Subtitle Indonesia",
+  "video": "https://cdn.odcloud.net/anime/Otakudesu.io_TenseiSlime.S4--21_720p.mp4",
+  "iframe": "https://desustream.net/dstream/odcdn/?id=TXdXSlhBdGVKMGNnWkQyZHF4NWR0dEU1cTNuejAyYlFzR1FvaWU5bEhVcVJUYnRPYTlZQjZtSnNnaElUaWdWaA==",
+  "prev": "tenslem-s4-episode-20-sub-indo",
+  "servers": [
+    {
+      "quality": "720p",
+      "label": "odstream",
+      "token": "eyJpZCI6MjAzNjU2LCJpIjowLCJxIjoiNzIwcCJ9",
+      "payload": { "id": 203656, "i": 0, "q": "720p" }
+    }
+  ],
+  "downloads": [
+    {
+      "format": "Mp4 360p",
+      "size": "32.9 MB",
+      "links": [
+        { "host": "Filedon", "url": "https://link.desustream.com/?id=..." }
+      ]
+    }
+  ],
+  "allEpisodes": [
+    { "slug": "tenslem-s4-episode-21-sub-indo", "label": "Episode 21" }
+  ]
 }
 ```
 
@@ -127,19 +143,18 @@ Pakai `video` untuk tag `<video>` langsung:
 <video src="..." controls playsinline></video>
 ```
 
-Link di `downloads[].links[].url` adalah redirect asli situs (`link.desustream.com`), buka di tab baru.
+Link `downloads[].links[].url` adalah redirect asli situs, buka di tab baru.
 
 ### 6. `resolveMirror(payload, nonce?)`
 
-Tukar server player (filedon, vidhide, mega, odcdn).
+Tukar server player. `payload` dari `ep.servers[].payload`.
 
 ```js
-const ep = await getEpisode('tenslem-s4-episode-21-sub-indo');
 const r = await resolveMirror(ep.servers[0].payload);
 console.log(r.iframe);
 ```
 
-`payload` wajib dari `ep.servers[].payload`. `nonce` opsional, diambil otomatis kalau kosong.
+Return: `{ nonce, html, iframe }`.
 
 ## Test Cepat
 
@@ -147,11 +162,7 @@ console.log(r.iframe);
 node otakudesu.js
 ```
 
-Output yang diharapkan:
-
-```
-Home ongoing: 15
-```
+Output JSON: `{ home, listCount, found, anime, ep }`. Contoh lengkap: `respon.log`.
 
 ## Error Umum
 
@@ -164,6 +175,10 @@ Home ongoing: 15
 ## Batasan
 
 Sumber data milik pihak ketiga (`otakudesu.blog`). Struktur HTML bisa berubah sewaktu-waktu. Kode ini hanya membaca halaman publik.
+
+## Terms
+
+Lihat [`TERMS.md`](./TERMS.md). Edukasi/riset. Konten milik pemiliknya. Tanpa garansi.
 
 ## Donasi
 
