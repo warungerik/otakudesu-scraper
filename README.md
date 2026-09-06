@@ -1,26 +1,11 @@
 # Otakudesu Scraper
 
-Satu file scraper anime subtitle Indonesia. Nol dependensi. Node 18+.
+Scraper otakudesu.blog Nol dependensi. Node 18+.
 
 ![Node](https://img.shields.io/badge/node-%3E%3D18-16a34a?logo=node.js&logoColor=white)
 ![License](https://img.shields.io/badge/license-MIT-blue)
 ![Zero Deps](https://img.shields.io/badge/deps-0-lightgrey)
 ![ESM](https://img.shields.io/badge/module-ESM-2563eb)
-
-## Isi Repo
-
-| File | Fungsi |
-| --- | --- |
-| `otakudesu.js` | Scraper utama (6 fungsi). |
-| `LICENSE` | Lisensi MIT. |
-
-## Install
-
-Tidak ada install. Node 18+ sudah cukup, `fetch` bawaan.
-
-```bash
-node --version
-```
 
 ## Cara Pakai
 
