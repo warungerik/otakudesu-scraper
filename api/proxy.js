@@ -6,9 +6,17 @@ export default async function handler(req, res) {
 
   const BASE = 'https://otakudesu.blog';
   const type = (req.query.type || 'home').toString();
-  const UA = { 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36' };
-
-  const get = async (url, init) => (await fetch(url, { headers: UA, ...init })).text();
+  const UA = { 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8', 'Accept-Language': 'id-ID,id;q=0.9,en-US;q=0.8,en;q=0.7', 'Referer': 'https://www.google.com/', 'Upgrade-Insecure-Requests': '1' };
+  const RAW = async (url) => { const r = await fetch(url, { headers: UA, redirect: 'follow' }); return { status: r.status, html: await r.text() }; };
+  // ponytail: IP datacenter (Vercel) sering diblokir; fallback via proxy publik tanpa dep baru
+  const get = async (url, init) => {
+    const direct = await RAW(url);
+    if (direct.html && direct.html.length > 5000) return direct.html;
+    for (const p of [`https://api.allorigins.win/raw?url=${encodeURIComponent(url)}`, `https://api.codetabs.com/v1/proxy?quest=${encodeURIComponent(url)}`]) {
+      try { const r = await fetch(p, { headers: { 'User-Agent': UA['User-Agent'] } }); const t = await r.text(); if (t && t.length > 5000) return t; } catch {}
+    }
+    return direct.html;
+  };
   const pic = (html) => {
     const out = [];
     const re = /<div class=['"]detpost['"]>([\s\S]*?)<\/li>/g;
