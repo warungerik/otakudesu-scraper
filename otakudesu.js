@@ -1,8 +1,3 @@
-/**
- * Otakudesu Scraper (Node.js 18+)
- * Tanpa library eksternal (Zero Dependencies)
- */
-
 const BASE = 'https://otakudesu.blog';
 const UA = { 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36' };
 
@@ -31,29 +26,18 @@ const parseCards = (html) => {
   return items;
 };
 
-/**
- * 1. Ambil Anime Ongoing & Selesai di Beranda
- */
 export async function getHome() {
   const html = await get(BASE + '/');
   const [on, cp] = html.split('Complete Anime');
   return { ongoing: parseCards(on), complete: parseCards(cp || '') };
 }
 
-/**
- * 2. Ambil Daftar Anime Lengkap (Ongoing / Complete)
- * @param {'ongoing' | 'complete'} type
- */
 export async function getList(type = 'ongoing') {
   const path = type === 'ongoing' ? 'ongoing-anime' : 'complete-anime';
   const html = await get(`${BASE}/${path}/`);
   return parseCards(html);
 }
 
-/**
- * 3. Cari Anime
- * @param {string} query
- */
 export async function search(query) {
   const html = await get(`${BASE}/?s=${encodeURIComponent(query)}&post_type=anime`);
   const items = [];
@@ -74,10 +58,6 @@ export async function search(query) {
   return items;
 }
 
-/**
- * 4. Detail Anime & Daftar Episode
- * @param {string} slug
- */
 export async function getAnime(slug) {
   const html = await get(`${BASE}/anime/${slug}/`);
   const info = {};
@@ -103,17 +83,12 @@ export async function getAnime(slug) {
   return { info, genres, cover, episodes, batch: batchLinks };
 }
 
-/**
- * 5. Stream, Direct MP4 & Link Download Episode
- * @param {string} slug
- */
 export async function getEpisode(slug) {
   const html = await get(`${BASE}/episode/${slug}/`);
   const iframe = (html.match(/responsive-embed-stream"><iframe src="([^"]+)/) || [])[1] || '';
   const title = (html.match(/<h1 class="posttl">([^<]+)/) || [])[1] || '';
   const prev = (html.match(/class='flir'><a href="https:\/\/otakudesu\.blog\/episode\/([^/]+)\/" title="Episode Sebelumnya"/) || [])[1] || '';
 
-  // Auto-ekstrak stream video direct MP4 dari player desustream
   let video = '';
   if (iframe.includes('desustream.net')) {
     try {
@@ -122,7 +97,6 @@ export async function getEpisode(slug) {
     } catch {}
   }
 
-  // Server alternatif (mirror)
   const servers = [];
   (html.match(/<div class="mirrorstream"[\s\S]*?<\/div><\/div>/) || [''])
     .toString().replace(/Mirror (\w+)<li>([\s\S]*?)(?=<\/ul|$)/g, (_, q, li) => {
@@ -132,7 +106,6 @@ export async function getEpisode(slug) {
       return '';
     });
 
-  // Link Download per resolusi
   const downloads = [];
   html.replace(/<li><strong>([^<]+)<\/strong>([\s\S]*?)(?=<\/li>)/g, (_, format, links) => {
     const items = [...links.matchAll(/<a href="([^"]+)"[^>]*>([^<]+?)\s*<\/a>/g)].map((m) => ({ host: m[2].trim(), url: m[1] }));
@@ -147,11 +120,6 @@ export async function getEpisode(slug) {
   return { title, video, iframe, prev, servers, downloads, allEpisodes };
 }
 
-/**
- * 6. Resolve Dynamic Mirror (Ganti Server Player)
- * @param {object} payload - objek payload dari server mirror (diambil dari getEpisode)
- * @param {string} [nonce] - token sesi wordpress (opsional, auto-fetch jika kosong)
- */
 export async function resolveMirror(payload, nonce) {
   const post = async (data) => (await fetch(`${BASE}/wp-admin/admin-ajax.php`, {
     method: 'POST',
@@ -169,16 +137,7 @@ export async function resolveMirror(payload, nonce) {
   return { nonce, html: embedHtml, iframe: iframeSrc };
 }
 
-// ponytail: Contoh penggunaan langsung via terminal `node otakudesu.js`
 if (process.argv[1]?.endsWith('otakudesu.js')) {
-  console.log('--- Testing Otakudesu Scraper ---');
   const home = await getHome();
-  console.log('✓ Home:', home.ongoing.length, 'ongoing |', home.complete.length, 'complete');
-
-  const anime = await getAnime('slime-s4-sub-indo');
-  console.log('✓ Anime:', anime.info.Judul, '| Total Eps:', anime.episodes.length);
-
-  const ep = await getEpisode('tenslem-s4-episode-21-sub-indo');
-  console.log('✓ Episode Video MP4:', ep.video || '(iframe only)');
-  console.log('✓ Download Server:', ep.downloads[0]?.format, ep.downloads[0]?.links.map((l) => l.host).join(', '));
+  console.log('Home ongoing:', home.ongoing.length);
 }
