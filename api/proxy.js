@@ -109,7 +109,15 @@ export default async function handler(req, res) {
       });
       const allEps = [...html.matchAll(/<option value="https:\/\/otakudesu\.blog\/episode\/([^/]+)\/"[^>]*>([^<]+)</g)]
         .map((m) => ({ slug: m[1], label: m[2] }));
-      return res.status(200).json({ title, iframe, prev, anime, servers, downloads, allEps });
+      // ponytail: embed desustream berisi videoURL mp4 langsung; ekstrak agar <video> native bisa dipakai
+      let video = '';
+      if (iframe.includes('desustream.net')) {
+        try {
+          const eh = await (await fetch(iframe, { headers: { Referer: `${BASE}/`, 'User-Agent': UA['User-Agent'] } })).text();
+          video = (eh.match(/videoURL\s*=\s*"([^"]+)"/) || [])[1] || '';
+        } catch {}
+      }
+      return res.status(200).json({ title, iframe, video, prev, anime, servers, downloads, allEps });
     }
     if (type === 'mirror') {
       const body = typeof req.body === 'string' ? JSON.parse(req.body || '{}') : (req.body || {});

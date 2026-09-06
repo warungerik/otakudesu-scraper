@@ -79,7 +79,9 @@ async function episode(slug) {
   app.innerHTML = `
     <h1 style="font-size:1.2rem;margin-bottom:.6rem">${esc(d.title)}</h1>
     <div class="notice">Server default dimuat otomatis. Klik server lain bila error. Download = link asli otakudesu (link.desustream).</div>
-    <div class="player-box"><iframe id="player" src="${esc(d.iframe)}" allowfullscreen></iframe></div>
+    ${d.video
+      ? `<div class="player-box"><video id="player" src="${esc(d.video)}" controls playsinline preload="metadata"></video></div>`
+      : `<div class="player-box"><iframe id="player" src="${esc(d.iframe)}" allowfullscreen></iframe></div>`}
     <div class="controls">
       ${d.prev ? `<a class="btn" href="#/episode/${d.prev}">← Prev</a>` : ''}
       ${d.anime ? `<a class="btn" href="#/anime/${d.anime}">Semua Episode</a>` : ''}
