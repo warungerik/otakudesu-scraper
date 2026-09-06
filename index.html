@@ -1,20 +1,301 @@
 <!doctype html>
 <html lang="id">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>OtakuStream — Nonton Anime Sub Indo</title>
-<meta name="description" content="Streaming & download anime subtitle Indonesia. Data live dari otakudesu.blog via proxy.">
-<link rel="stylesheet" href="style.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Otakudesu Scraper — Dokumentasi API & Panduan Penggunaan</title>
+  <meta name="description" content="Dokumentasi lengkap Otakudesu Scraper untuk Node.js. Zero dependencies, direct MP4 streaming, embed iframe, dan link download.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="docs.css">
 </head>
 <body>
-<header>
-  <a class="logo" href="#/" id="homeLink">Otaku<span>Stream</span></a>
-  <form id="searchForm"><input id="q" placeholder="Cari anime… (mis. slime)" autocomplete="off"><button>Cari</button></form>
-  <nav><a href="#/ongoing">Ongoing</a><a href="#/complete">Complete</a></nav>
-</header>
-<main id="app"><p class="muted">Memuat…</p></main>
-<footer><small>Data live dari otakudesu.blog • streaming & download tetap via link asli • untuk Vercel</small></footer>
-<script src="app.js"></script>
+  <div class="glow-bg"></div>
+
+  <header>
+    <a href="#" class="brand">
+      <span>⚡ Otakudesu</span> Scraper
+      <span class="brand-badge">v1.0.0</span>
+    </a>
+    <div class="nav-links">
+      <a href="#quickstart">Quickstart</a>
+      <a href="#methods">Fungsi API</a>
+      <a href="#fullcode">Kode Lengkap</a>
+      <button class="btn-raw" onclick="copyFullSource()">📋 Salin Semua Kode</button>
+    </div>
+  </header>
+
+  <div class="layout">
+    <aside>
+      <h4>Memulai</h4>
+      <ul>
+        <li><a href="#quickstart" class="active">Instalasi & Penggunaan</a></li>
+      </ul>
+      <h4>Daftar Fungsi</h4>
+      <ul>
+        <li><a href="#getHome">getHome()</a></li>
+        <li><a href="#getList">getList(type)</a></li>
+        <li><a href="#search">search(query)</a></li>
+        <li><a href="#getAnime">getAnime(slug)</a></li>
+        <li><a href="#getEpisode">getEpisode(slug)</a></li>
+        <li><a href="#resolveMirror">resolveMirror()</a></li>
+      </ul>
+      <h4>Referensi</h4>
+      <ul>
+        <li><a href="#fullcode">Source Code Lengkap</a></li>
+      </ul>
+    </aside>
+
+    <main>
+      <!-- Hero -->
+      <section class="hero">
+        <div class="hero-pill"><span></span> Zero Dependencies • Native Node.js Fetch</div>
+        <h1>Dokumentasi <span>Otakudesu Scraper</span></h1>
+        <p>Kode scraper anime bahasa Indonesia yang ringan, modular, dan siap pakai. Mendukung ekstraksi stream MP4 langsung, player iframe, mirror server, dan link download per resolusi.</p>
+
+        <div class="stats-bar">
+          <div class="stat-item">
+            <div class="stat-val">6</div>
+            <div class="stat-lbl">Fungsi Siap Pakai</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-val">0</div>
+            <div class="stat-lbl">Dependencies (Bebas npm install)</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-val">Direct MP4</div>
+            <div class="stat-lbl">Bypass Iframe Player</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Quickstart -->
+      <section id="quickstart">
+        <h2>🚀 Quickstart</h2>
+        <p class="lead">Cukup simpan kode scraper ke dalam file <code>otakudesu.js</code> di project Anda. Tanpa perlu install library tambahan.</p>
+
+        <div class="api-card">
+          <div class="api-head">
+            <div class="api-title">Contoh Import & Eksekusi</div>
+            <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+          </div>
+          <div class="code-box">
+            <pre><code>// Impor fungsi yang Anda butuhkan
+import { getHome, getAnime, getEpisode, search } from './otakudesu.js';
+
+// 1. Ambil anime terbaru di beranda
+const home = await getHome();
+console.log(home.ongoing);
+
+// 2. Ambil detail anime
+const anime = await getAnime('slime-s4-sub-indo');
+console.log(anime.info.Judul, anime.episodes);
+
+// 3. Ambil video nonton & download episode
+const ep = await getEpisode('tenslem-s4-episode-21-sub-indo');
+console.log('Stream MP4 Langsung:', ep.video);</code></pre>
+          </div>
+        </div>
+      </section>
+
+      <!-- Methods -->
+      <section id="methods">
+        <h2>📦 Daftar Fungsi Lengkap</h2>
+        <p class="lead">Setiap fungsi mengembalikan format JavaScript Object / JSON murni yang mudah diolah.</p>
+
+        <!-- getHome -->
+        <div class="api-card" id="getHome">
+          <div class="api-head">
+            <div class="api-title"><span class="tag-method">async</span> getHome()</div>
+            <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+          </div>
+          <div class="api-desc">Mengambil daftar anime yang sedang tayang (Ongoing) dan anime yang sudah tamat (Complete) di halaman depan.</div>
+          <div class="code-box">
+            <div class="code-bar">Usage</div>
+            <pre><code>import { getHome } from './otakudesu.js';
+
+const { ongoing, complete } = await getHome();</code></pre>
+          </div>
+          <div class="resp-box">
+            <div class="resp-bar">Contoh Nilai Balik (Return JSON)</div>
+            <pre><code>{
+  "ongoing": [
+    {
+      "title": "Neko to Ryuu",
+      "slug": "neko-ryuu-sub-indo",
+      "episode": "Episode 11",
+      "day": "Sabtu",
+      "date": "06 Sep",
+      "cover": "https://otakudesu.blog/wp-content/uploads/2026/07/157796.jpg"
+    }
+  ],
+  "complete": [ ... ]
+}</code></pre>
+          </div>
+        </div>
+
+        <!-- getList -->
+        <div class="api-card" id="getList">
+          <div class="api-head">
+            <div class="api-title"><span class="tag-method">async</span> getList(type = 'ongoing')</div>
+            <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+          </div>
+          <div class="api-desc">Mengambil seluruh daftar arsip anime ongoing atau anime tamat. Parameter: <code>'ongoing'</code> atau <code>'complete'</code>.</div>
+          <div class="code-box">
+            <div class="code-bar">Usage</div>
+            <pre><code>import { getList } from './otakudesu.js';
+
+const ongoingList = await getList('ongoing');
+const completeList = await getList('complete');</code></pre>
+          </div>
+        </div>
+
+        <!-- search -->
+        <div class="api-card" id="search">
+          <div class="api-head">
+            <div class="api-title"><span class="tag-method">async</span> search(query)</div>
+            <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+          </div>
+          <div class="api-desc">Mencari judul anime dari kata kunci yang diberikan. Mengembalikan judul, slug, genre, status, dan rating.</div>
+          <div class="code-box">
+            <div class="code-bar">Usage</div>
+            <pre><code>import { search } from './otakudesu.js';
+
+const hasil = await search('naruto');</code></pre>
+          </div>
+          <div class="resp-box">
+            <div class="resp-bar">Contoh Nilai Balik</div>
+            <pre><code>[
+  {
+    "title": "Boruto: Naruto Next Generations Subtitle Indonesia",
+    "slug": "borot-sub-indo",
+    "cover": "https://otakudesu.blog/wp-content/uploads/2020/05/Boruto-Sub-Indo.jpg",
+    "genres": "Action, Adventure, Martial Arts, Shounen, Super Power",
+    "status": "Drop",
+    "rating": "6.15"
+  }
+]</code></pre>
+          </div>
+        </div>
+
+        <!-- getAnime -->
+        <div class="api-card" id="getAnime">
+          <div class="api-head">
+            <div class="api-title"><span class="tag-method">async</span> getAnime(slug)</div>
+            <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+          </div>
+          <div class="api-desc">Mengambil informasi detail lengkap anime, produser, status, tanggal rilis, sinopsis, serta daftar episode yang tersedia.</div>
+          <div class="code-box">
+            <div class="code-bar">Usage</div>
+            <pre><code>import { getAnime } from './otakudesu.js';
+
+const anime = await getAnime('slime-s4-sub-indo');</code></pre>
+          </div>
+          <div class="resp-box">
+            <div class="resp-bar">Contoh Nilai Balik</div>
+            <pre><code>{
+  "info": {
+    "Judul": "Tensei shitara Slime Datta Ken Season 4",
+    "Japanese": "転生したらスライムだった件 第4期",
+    "Skor": "7.69",
+    "Tipe": "TV",
+    "Status": "Ongoing",
+    "Tanggal Rilis": "Apr 03, 2026"
+  },
+  "genres": ["Action", "Comedy", "Fantasy", "Isekai"],
+  "cover": "https://otakudesu.blog/wp-content/uploads/2026/04/156389.jpg",
+  "episodes": [
+    {
+      "slug": "tenslem-s4-episode-21-sub-indo",
+      "title": "Tensei shitara Slime Datta Ken Season 4 Episode 21 Subtitle Indonesia",
+      "date": "4 September,2026"
+    }
+  ],
+  "batch": []
+}</code></pre>
+          </div>
+        </div>
+
+        <!-- getEpisode -->
+        <div class="api-card" id="getEpisode">
+          <div class="api-head">
+            <div class="api-title"><span class="tag-method">async</span> getEpisode(slug)</div>
+            <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+          </div>
+          <div class="api-desc">
+            Mengambil data streaming dan download episode. Fitur unggulan: otomatis mengekstrak file video <strong>Direct MP4</strong> langsung (misal: cdn.odcloud.net) sehingga dapat diputar langsung di tag <code>&lt;video&gt;</code> tanpa iklan iframe.
+          </div>
+          <div class="code-box">
+            <div class="code-bar">Usage</div>
+            <pre><code>import { getEpisode } from './otakudesu.js';
+
+const ep = await getEpisode('tenslem-s4-episode-21-sub-indo');</code></pre>
+          </div>
+          <div class="resp-box">
+            <div class="resp-bar">Contoh Nilai Balik</div>
+            <pre><code>{
+  "title": "Tensei shitara Slime Datta Ken Season 4 Episode 21 Subtitle Indonesia",
+  "video": "https://cdn.odcloud.net/anime/Otakudesu.io_TenseiSlime.S4--21_720p.mp4",
+  "iframe": "https://desustream.net/dstream/odcdn/?id=...",
+  "prev": "tenslem-s4-episode-20-sub-indo",
+  "servers": [
+    { "quality": "360p", "label": "filedon", "payload": { "id": 203656, "i": 0, "q": "360p" } }
+  ],
+  "downloads": [
+    {
+      "format": "Mp4 360p",
+      "size": "32.9 MB",
+      "links": [
+        { "host": "Filedon", "url": "https://link.desustream.com/?id=..." },
+        { "host": "Mega", "url": "https://link.desustream.com/?id=..." }
+      ]
+    }
+  ],
+  "allEpisodes": [ ... ]
+}</code></pre>
+          </div>
+        </div>
+
+        <!-- resolveMirror -->
+        <div class="api-card" id="resolveMirror">
+          <div class="api-head">
+            <div class="api-title"><span class="tag-method">async</span> resolveMirror(payload, nonce)</div>
+            <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+          </div>
+          <div class="api-desc">Mengubah server player alternatif (misalnya filedon, vidhide, mega) melalui sistem 2-step WordPress AJAX resolver milik situs asal.</div>
+          <div class="code-box">
+            <div class="code-bar">Usage</div>
+            <pre><code>import { getEpisode, resolveMirror } from './otakudesu.js';
+
+const ep = await getEpisode('tenslem-s4-episode-21-sub-indo');
+const server = ep.servers[0]; // contoh: filedon
+
+// Dapatkan url embed baru
+const result = await resolveMirror(server.payload);
+console.log('Iframe Embed Baru:', result.iframe);</code></pre>
+          </div>
+        </div>
+      </section>
+
+      <!-- Full Code -->
+      <section id="fullcode" class="source-section">
+        <h2>📄 Source Code Lengkap (otakudesu.js)</h2>
+        <p class="lead">Salin seluruh kode di bawah ini langsung atau tekan tombol salin di kanan atas.</p>
+
+        <div class="api-card">
+          <div class="api-head">
+            <div class="api-title">otakudesu.js</div>
+            <button class="copy-btn" onclick="copyFullSource()">Copy All Code</button>
+          </div>
+          <div class="code-box">
+            <pre><code id="fullSourceCode">// Sedang memuat...</code></pre>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="docs.js"></script>
 </body>
 </html>
