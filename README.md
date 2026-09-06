@@ -12,8 +12,6 @@ Satu file scraper anime subtitle Indonesia. Nol dependensi. Node 18+.
 | File | Fungsi |
 | --- | --- |
 | `otakudesu.js` | Scraper utama (6 fungsi). |
-| `index.html` + `docs.css` + `docs.js` | Web dokumentasi (Vue 3 via CDN, deploy langsung ke Vercel). |
-| `vercel.json` | Routing statis untuk Vercel. |
 | `LICENSE` | Lisensi MIT. |
 
 ## Install
@@ -170,18 +168,6 @@ Output yang diharapkan:
 Home ongoing: 15
 ```
 
-## Deploy Docs ke Vercel
-
-Repo ini sudah termasuk web dokumentasi statis.
-
-```bash
-git add -A
-git commit -m "docs"
-git push
-```
-
-Vercel: Import repo > Deploy. Tanpa build command.
-
 ## Error Umum
 
 | Gejala | Penyebab | Perbaikan |
@@ -199,8 +185,6 @@ Sumber data milik pihak ketiga (`otakudesu.blog`). Struktur HTML bisa berubah se
 Terbantu? Traktir kopi:
 
 [![Buy Me A Coffee](https://img.shields.io/badge/☕-Buy%20Me%20A%20Coffee-FFDD00?logo=buymeacoffee&logoColor=black)](https://warungerik.com/payment)
-
-https://warungerik.com/payment
 
 ## Lisensi
 

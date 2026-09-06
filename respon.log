@@ -1,0 +1,845 @@
+{
+  "home": {
+    "ongoing": [
+      {
+        "title": "Neko to Ryuu",
+        "slug": "neko-ryuu-sub-indo",
+        "episode": "Episode 11",
+        "day": "Sabtu",
+        "date": "06 Sep",
+        "cover": "https://otakudesu.blog/wp-content/uploads/2026/07/157796.jpg"
+      },
+      {
+        "title": "Saijo no Osewa",
+        "slug": "saijo-osewa-sub-indo",
+        "episode": "Episode 10",
+        "day": "Minggu",
+        "date": "06 Sep",
+        "cover": "https://otakudesu.blog/wp-content/uploads/2026/07/Saijo-no-Osewa.jpg"
+      },
+      {
+        "title": "Mao",
+        "slug": "mao-sub-indo",
+        "episode": "Episode 23",
+        "day": "Minggu",
+        "date": "06 Sep",
+        "cover": "https://otakudesu.blog/wp-content/uploads/2026/04/Mao.jpg"
+      },
+      {
+        "title": "Tenmaku no Jaadugar",
+        "slug": "tenmaku-jaadugar-sub-indo",
+        "episode": "Episode 11",
+        "day": "Minggu",
+        "date": "06 Sep",
+        "cover": "https://otakudesu.blog/wp-content/uploads/2026/07/158227.jpg"
+      },
+      {
+        "title": "Mahou Shoujo Lyrical Nanoha EXCEEDS",
+        "slug": "mahou-shoujo-exceeds-sub-indo",
+        "episode": "Episode 10",
+        "day": "Minggu",
+        "date": "06 Sep",
+        "cover": "https://otakudesu.blog/wp-content/uploads/2026/07/Mahou-Shoujo-Lyrical-Nanoha-EXCEEDS.jpg"
+      },
+      {
+        "title": "Yomi no Tsugai",
+        "slug": "yomi-tsugai-sub-indo",
+        "episode": "Episode 22",
+        "day": "Sabtu",
+        "date": "06 Sep",
+        "cover": "https://otakudesu.blog/wp-content/uploads/2026/04/156397.jpg"
+      },
+      {
+        "title": "Bleach: Sennen Kessen-hen - Kashin-tan",
+        "slug": "bleach-kashin-tan-sub-indo",
+        "episode": "Episode 7",
+        "day": "Sabtu",
+        "date": "05 Sep",
+        "cover": "https://otakudesu.blog/wp-content/uploads/2026/07/158595.jpg"
+      },
+      {
+        "title": "Black Torch",
+        "slug": "black-torch-sub-indo",
+        "episode": "Episode 10",
+        "day": "Sabtu",
+        "date": "05 Sep",
+        "cover": "https://otakudesu.blog/wp-content/uploads/2026/07/Black-Torch.jpg"
+      },
+      {
+        "title": "Mairimashita! Iruma-kun Season 4",
+        "slug": "iruma-kun-s4-sub-indo",
+        "episode": "Episode 21",
+        "day": "Sabtu",
+        "date": "05 Sep",
+        "cover": "https://otakudesu.blog/wp-content/uploads/2026/04/Mairimashita-Iruma-kun-Season-4.jpg"
+      },
+      {
+        "title": "Tensei shitara Slime Datta Ken Season 4",
+        "slug": "slime-s4-sub-indo",
+        "episode": "Episode 21",
+        "day": "Jumat",
+        "date": "05 Sep",
+        "cover": "https://otakudesu.blog/wp-content/uploads/2026/04/156389.jpg"
+      },
+      {
+        "title": "Honzuki no Gekokujou Season 4",
+        "slug": "honzoku-gekokujou-season-4-sub-indo",
+        "episode": "Episode 20",
+        "day": "Sabtu",
+        "date": "05 Sep",
+        "cover": "https://otakudesu.blog/wp-content/uploads/2026/04/Honzuki-no-Gekokujou-Season-4-Sub.jpg"
+      },
+      {
+        "title": "Uchi no Otouto-domo ga Sumimasen",
+        "slug": "uchi-otouto-sumimasen-sub-indo",
+        "episode": "Episode 10",
+        "day": "Sabtu",
+        "date": "05 Sep",
+        "cover": "https://otakudesu.blog/wp-content/uploads/2026/07/Uchi-no-Otouto-domo-ga-Sumimasen.jpg"
+      },
+      {
+        "title": "Nige Jouzu no Wakagimi Season 2",
+        "slug": "nige-wakagimi-s2-sub-indo",
+        "episode": "Episode 8",
+        "day": "Sabtu",
+        "date": "05 Sep",
+        "cover": "https://otakudesu.blog/wp-content/uploads/2026/07/156329.jpg"
+      },
+      {
+        "title": "Hell Mode Season 2",
+        "slug": "hell-mode-s2-sub-indo",
+        "episode": "Episode 10",
+        "day": "Sabtu",
+        "date": "05 Sep",
+        "cover": "https://otakudesu.blog/wp-content/uploads/2026/07/156314.jpg"
+      },
+      {
+        "title": "Ryoumin 0-nin Start no Henkyou Ryoushu-sama",
+        "slug": "ryoumin-ryoushu-sub-indo",
+        "episode": "Episode 10",
+        "day": "Jumat",
+        "date": "04 Sep",
+        "cover": "https://otakudesu.blog/wp-content/uploads/2026/07/Ryoumin-0-nin-Start-no-Henkyou-Ryoushu-sama.jpg"
+      }
+    ],
+    "complete": [
+      {
+        "title": "Nippon Sangoku",
+        "slug": "nippon-sangoku-sub-indo",
+        "episode": "12 Episode",
+        "day": "8.53",
+        "date": "05 Sep",
+        "cover": "https://otakudesu.blog/wp-content/uploads/2026/09/Nippon-Sangoku-Sub-Indo.jpg"
+      },
+      {
+        "title": "Tsue to Tsurugi no Wistoria Season 2",
+        "slug": "tsue-tsurugi-wistoria-s2-sub-indo",
+        "episode": "12 Episode",
+        "day": "8.18",
+        "date": "31 Agu",
+        "cover": "https://otakudesu.blog/wp-content/uploads/2026/08/Tsue-to-Tsurugi-no-Wistoria-Season-2-Sub-Indo.jpg"
+      },
+      {
+        "title": "Yozakura-san Chi no Daisakusen Season 2",
+        "slug": "yozakura-daisakusen-s2-sub-indo",
+        "episode": "12 Episode",
+        "day": "7.45",
+        "date": "30 Agu",
+        "cover": "https://otakudesu.blog/wp-content/uploads/2026/08/Yozakura-san-Chi-no-Daisakusen-Season-2-Sub-Indo.jpg"
+      },
+      {
+        "title": "Kill Ao",
+        "slug": "kill-ao-sub-indo",
+        "episode": "12 Episode",
+        "day": "7.32",
+        "date": "28 Agu",
+        "cover": "https://otakudesu.blog/wp-content/uploads/2026/08/Kill-Ao-Sub-Indo.jpg"
+      },
+      {
+        "title": "Shunkashuutou Daikousha: Haru no Mai",
+        "slug": "shunkashuutou-daikousha-sub-indo",
+        "episode": "14 Episode",
+        "day": "7.72",
+        "date": "26 Agu",
+        "cover": "https://otakudesu.blog/wp-content/uploads/2026/08/Shunkashuutou-Daikousha-Haru-no-Mai-Sub-Indo.jpg"
+      },
+      {
+        "title": "Yowayowa Sensei",
+        "slug": "yowayowa-sensei-sub-indo",
+        "episode": "12 Episode",
+        "day": "6.61",
+        "date": "24 Agu",
+        "cover": "https://otakudesu.blog/wp-content/uploads/2026/08/Yowayowa-Sensei-Sub-Indo.jpg"
+      },
+      {
+        "title": "Kamiina Botan, Yoeru Sugata wa Yuri no Hana",
+        "slug": "kamina-botan-yoeru-sugata-yuri-hana-sub-indo",
+        "episode": "12 Episode",
+        "day": "8.14",
+        "date": "24 Agu",
+        "cover": "https://otakudesu.blog/wp-content/uploads/2026/08/Kamiina-Botan-Yoeru-Sugata-wa-Yuri-no-Hana-Sub-Indo.jpg"
+      },
+      {
+        "title": "Himekishi wa Barbaroi no Yome",
+        "slug": "himekishi-barbaroi-yome-sub-indo",
+        "episode": "12 Episode",
+        "day": "6.93",
+        "date": "21 Agu",
+        "cover": "https://otakudesu.blog/wp-content/uploads/2026/08/Himekishi-wa-Barbaroi-no-Yome-Sub-Indo.jpg"
+      },
+      {
+        "title": "Kanojo, Okarishimasu Season 5",
+        "slug": "kanojo-no-okarishimasu-s5-sub-indo",
+        "episode": "12 Episode",
+        "day": "6.31",
+        "date": "21 Agu",
+        "cover": "https://otakudesu.blog/wp-content/uploads/2026/08/Kanojo-Okarishimasu-Season-5-Sub-Indo.jpg"
+      },
+      {
+        "title": "Youkoso Jitsuryoku Shijou Shugi no Kyoushitsu e Season 4",
+        "slug": "youkoso-jitsuryoku-shijou-shugi-no-kyoushitsu-e-s4-sub-indo",
+        "episode": "16 Episode",
+        "day": "7.85",
+        "date": "24 Jul",
+        "cover": "https://otakudesu.blog/wp-content/uploads/2026/07/Youkoso-Jitsuryoku-Shijou-Shugi-no-Kyoushitsu-e-Season-4-Sub-Indo.jpg"
+      }
+    ]
+  },
+  "listCount": 25,
+  "found": [
+    {
+      "title": "Tensei shitara Slime Datta Ken Season 4 Subtitle Indonesia",
+      "slug": "slime-s4-sub-indo",
+      "cover": "https://otakudesu.blog/wp-content/uploads/2026/04/156389.jpg",
+      "genres": "Action, Comedy, Fantasy, Isekai, Reincarnation, Shounen",
+      "status": "Ongoing",
+      "rating": "7.69"
+    },
+    {
+      "title": "Slime Taoshite 300-nen, Shiranai Uchi ni Level Max ni Nattemashita: Sono Ni (Episode 1 &#8211; 12) Subtitle Indonesia",
+      "slug": "slime-taoshite-s2-sub-indo",
+      "cover": "https://otakudesu.blog/wp-content/uploads/2025/07/Slime-Taoshite-300-nen-Season-2-Sub-Indo.jpg",
+      "genres": "CGDCT, Comedy, Fantasy, Isekai",
+      "status": "Completed",
+      "rating": "6.69"
+    },
+    {
+      "title": "Tensei shitara Slime Datta Ken Season 3 (Episode 1 &#8211; 24) Subtitle Indonesia",
+      "slug": "slime-s3-sub-indo",
+      "cover": "https://otakudesu.blog/wp-content/uploads/2024/10/Tensei-shitara-Slime-Datta-Ken-Season-3-Sub-Indo.jpg",      "genres": "Action, Adventure, Comedy, Fantasy, Isekai, Reincarnation, Shounen",
+      "status": "Completed",
+      "rating": "7.69"
+    },
+    {
+      "title": "Tensei shitara Slime Datta Ken: Coleus no Yume Sub Indo",
+      "slug": "tensei-shitara-slime-datta-coleus-yume-sub-indo",
+      "cover": "https://otakudesu.blog/wp-content/uploads/2023/11/Tensei-shitara-Slime-Datta-Ken-Coleus-no-Yume.jpg",
+      "genres": "Action, Adventure, Comedy, Fantasy, Isekai, Reincarnation, Shounen",
+      "status": "Drop",
+      "rating": "7.82"
+    },
+    {
+      "title": "Tensei shitara Slime Datta Ken Season 2 (Episode 1 &#8211; 24) Subtitle Indonesia",
+      "slug": "tensei-slime-s2-sub-indo",
+      "cover": "https://otakudesu.blog/wp-content/uploads/2021/01/Tensei-shitara-Slime-Datta-Ken-Season-2-Sub-Indo.jpg",      "genres": "Comedy, Fantasy",
+      "status": "Completed",
+      "rating": "8.36"
+    },
+    {
+      "title": "Slime Taoshite 300-nen, Shiranai Uchi ni Level Max ni Nattemashita (Episode 1 &#8211; 12) Subtitle Indonesia",
+      "slug": "slime-taoshite-sub-indo",
+      "cover": "https://otakudesu.blog/wp-content/uploads/2021/06/Slime-Taoshite-300-nen-Sub-Indo.jpg",
+      "genres": "Comedy, Fantasy",
+      "status": "Completed",
+      "rating": "7.08"
+    },
+    {
+      "title": "Tensura Nikki: Tensei shitara Slime Datta Ken (Episode 1 &#8211; 12) Subtitle Indonesia",
+      "slug": "tensura-nikki-sub-indo",
+      "cover": "https://otakudesu.blog/wp-content/uploads/2021/06/Tensura-Nikki-Sub-Indo.jpg",
+      "genres": "Comedy, Fantasy, Shounen, Slice of Life",
+      "status": "Completed",
+      "rating": "7.54"
+    },
+    {
+      "title": "Tensei shitara Slime Datta Ken (Episode 1 &#8211; 24) Subtitle Indonesia",
+      "slug": "tensei-shi-slime-sub-indo",
+      "cover": "https://otakudesu.blog/wp-content/uploads/2019/03/Tensei-shitara-Slime-Datta-Ken-Sub-Indo.jpg",
+      "genres": "Fantasy",
+      "status": "Completed",
+      "rating": "8.30"
+    },
+    {
+      "title": "Dungeon Meshi (Episode 1 &#8211; 24) Subtitle Indonesia",
+      "slug": "dungeon-meshi-sub-indo",
+      "cover": "https://otakudesu.blog/wp-content/uploads/2025/03/Dungeon-Meshi-Sub-Indo.jpg",
+      "genres": "Adventure, Comedy, Fantasy, Gourmet, Seinen",
+      "status": "Completed",
+      "rating": "8.60"
+    },
+    {
+      "title": "Saijaku Tamer wa Gomi Hiroi no Tabi wo Hajimemashita (Episode 1 &#8211; 12) Subtitle Indonesia",
+      "slug": "saijaku-tamer-sub-indo",
+      "cover": "https://otakudesu.blog/wp-content/uploads/2024/03/Saijaku-Tamer-wa-Gomi-Hiroi-no-Tabi-wo-Hajimemashita-Sub-Indo.jpg",
+      "genres": "Adventure, Crossdressing, Fantasy, Isekai, Reincarnation",
+      "status": "Completed",
+      "rating": "7.56"
+    },
+    {
+      "title": "Tensei Kenja no Isekai Life (Episode 1 &#8211; 12) Subtitle Indonesia",
+      "slug": "tensei-kenja-isekai-life-sub-indo",
+      "cover": "https://otakudesu.blog/wp-content/uploads/2022/09/Tensei-Kenja-no-Isekai-Life-Sub-Indo.jpg",
+      "genres": "Action, Adventure, Fantasy, Isekai",
+      "status": "Completed",
+      "rating": "6.31"
+    }
+  ],
+  "anime": {
+    "info": {
+      "Judul": "Tensei shitara Slime Datta Ken Season 4",
+      "Japanese": "転生したらスライムだった件 第4期",
+      "Skor": "7.69",
+      "Produser": "Bandai Namco Filmworks",
+      "Tipe": "TV",
+      "Status": "Ongoing",
+      "Total Episode": "Unknown",
+      "Durasi": "24 min.",
+      "Tanggal Rilis": "Apr 03, 2026",
+      "Studio": "8bit",
+      "Genre": "Action, Comedy, Fantasy, Isekai, Reincarnation, Shounen"
+    },
+    "genres": [
+      "Action",
+      "Comedy",
+      "Fantasy",
+      "Isekai",
+      "Reincarnation",
+      "Shounen"
+    ],
+    "cover": "https://otakudesu.blog/wp-content/uploads/2026/04/156389.jpg",
+    "episodes": [
+      {
+        "slug": "tenslem-s4-episode-21-sub-indo",
+        "title": "Tensei shitara Slime Datta Ken Season 4 Episode 21 Subtitle Indonesia",
+        "date": "4 September,2026"
+      },
+      {
+        "slug": "tenslem-s4-episode-20-sub-indo",
+        "title": "Tensei shitara Slime Datta Ken Season 4 Episode 20 Subtitle Indonesia",
+        "date": "28 Agustus,2026"
+      },
+      {
+        "slug": "tenslem-s4-episode-19-sub-indo",
+        "title": "Tensei shitara Slime Datta Ken Season 4 Episode 19 Subtitle Indonesia",
+        "date": "21 Agustus,2026"
+      },
+      {
+        "slug": "tenslem-s4-episode-18-sub-indo",
+        "title": "Tensei shitara Slime Datta Ken Season 4 Episode 18 Subtitle Indonesia",
+        "date": "14 Agustus,2026"
+      },
+      {
+        "slug": "tenslem-s4-episode-17-sub-indo",
+        "title": "Tensei shitara Slime Datta Ken Season 4 Episode 17 Subtitle Indonesia",
+        "date": "7 Agustus,2026"
+      },
+      {
+        "slug": "tenslem-s4-episode-16-sub-indo",
+        "title": "Tensei shitara Slime Datta Ken Season 4 Episode 16 Subtitle Indonesia",
+        "date": "24 Juli,2026"
+      },
+      {
+        "slug": "tenslem-s4-episode-15-sub-indo",
+        "title": "Tensei shitara Slime Datta Ken Season 4 Episode 15 Subtitle Indonesia",
+        "date": "17 Juli,2026"
+      },
+      {
+        "slug": "tenslem-s4-episode-14-sub-indo",
+        "title": "Tensei shitara Slime Datta Ken Season 4 Episode 14 Subtitle Indonesia",
+        "date": "10 Juli,2026"
+      },
+      {
+        "slug": "tenslem-s4-episode-13-sub-indo",
+        "title": "Tensei shitara Slime Datta Ken Season 4 Episode 13 Subtitle Indonesia",
+        "date": "3 Juli,2026"
+      },
+      {
+        "slug": "tenslem-s4-episode-12-sub-indo",
+        "title": "Tensei shitara Slime Datta Ken Season 4 Episode 12 Subtitle Indonesia",
+        "date": "26 Juni,2026"
+      },
+      {
+        "slug": "tenslem-s4-episode-11-sub-indo",
+        "title": "Tensei shitara Slime Datta Ken Season 4 Episode 11 Subtitle Indonesia",
+        "date": "19 Juni,2026"
+      },
+      {
+        "slug": "tenslem-s4-episode-10-sub-indo",
+        "title": "Tensei shitara Slime Datta Ken Season 4 Episode 10 Subtitle Indonesia",
+        "date": "12 Juni,2026"
+      },
+      {
+        "slug": "tenslem-s4-episode-9-sub-indo",
+        "title": "Tensei shitara Slime Datta Ken Season 4 Episode 9 Subtitle Indonesia",
+        "date": "5 Juni,2026"
+      },
+      {
+        "slug": "tenslem-s4-episode-8-sub-indo",
+        "title": "Tensei shitara Slime Datta Ken Season 4 Episode 8 Subtitle Indonesia",
+        "date": "29 Mei,2026"
+      },
+      {
+        "slug": "tenslem-s4-episode-7-sub-indo",
+        "title": "Tensei shitara Slime Datta Ken Season 4 Episode 7 Subtitle Indonesia",
+        "date": "22 Mei,2026"
+      },
+      {
+        "slug": "tenslem-s4-episode-6-sub-indo",
+        "title": "Tensei shitara Slime Datta Ken Season 4 Episode 6 Subtitle Indonesia",
+        "date": "15 Mei,2026"
+      },
+      {
+        "slug": "tenslem-s4-episode-5-sub-indo",
+        "title": "Tensei shitara Slime Datta Ken Season 4 Episode 5 Subtitle Indonesia",
+        "date": "8 Mei,2026"
+      },
+      {
+        "slug": "tenslem-s4-episode-4-sub-indo",
+        "title": "Tensei shitara Slime Datta Ken Season 4 Episode 4 Subtitle Indonesia",
+        "date": "24 April,2026"
+      },
+      {
+        "slug": "tenslem-s4-episode-3-sub-indo",
+        "title": "Tensei shitara Slime Datta Ken Season 4 Episode 3 Subtitle Indonesia",
+        "date": "17 April,2026"
+      },
+      {
+        "slug": "tenslem-s4-episode-2-sub-indo",
+        "title": "Tensei shitara Slime Datta Ken Season 4 Episode 2 Subtitle Indonesia",
+        "date": "10 April,2026"
+      },
+      {
+        "slug": "tenslem-s4-episode-1-sub-indo",
+        "title": "Tensei shitara Slime Datta Ken Season 4 Episode 1 Subtitle Indonesia",
+        "date": "3 April,2026"
+      }
+    ],
+    "batch": []
+  },
+  "ep": {
+    "title": "Tensei shitara Slime Datta Ken Season 4 Episode 21 Subtitle Indonesia",
+    "video": "https://cdn.odcloud.net/anime/Otakudesu.io_TenseiSlime.S4--21_720p.mp4",
+    "iframe": "https://desustream.net/dstream/odcdn/?id=TXdXSlhBdGVKMGNnWkQyZHF4NWR0dEU1cTNuejAyYlFzR1FvaWU5bEhVcVJUYnRPYTlZQjZtSnNnaElUaWdWaA==",
+    "prev": "tenslem-s4-episode-20-sub-indo",
+    "servers": [
+      {
+        "quality": "360p",
+        "label": "filedon",
+        "token": "eyJpZCI6MjAzNjU2LCJpIjowLCJxIjoiMzYwcCJ9",
+        "payload": {
+          "id": 203656,
+          "i": 0,
+          "q": "360p"
+        }
+      },
+      {
+        "quality": "360p",
+        "label": "vidhide",
+        "token": "eyJpZCI6MjAzNjU2LCJpIjoxLCJxIjoiMzYwcCJ9",
+        "payload": {
+          "id": 203656,
+          "i": 1,
+          "q": "360p"
+        }
+      },
+      {
+        "quality": "360p",
+        "label": "mega",
+        "token": "eyJpZCI6MjAzNjU2LCJpIjoyLCJxIjoiMzYwcCJ9",
+        "payload": {
+          "id": 203656,
+          "i": 2,
+          "q": "360p"
+        }
+      },
+      {
+        "quality": "480p",
+        "label": "odcdn",
+        "token": "eyJpZCI6MjAzNjU2LCJpIjowLCJxIjoiNDgwcCJ9",
+        "payload": {
+          "id": 203656,
+          "i": 0,
+          "q": "480p"
+        }
+      },
+      {
+        "quality": "480p",
+        "label": "filedon",
+        "token": "eyJpZCI6MjAzNjU2LCJpIjoxLCJxIjoiNDgwcCJ9",
+        "payload": {
+          "id": 203656,
+          "i": 1,
+          "q": "480p"
+        }
+      },
+      {
+        "quality": "480p",
+        "label": "vidhide",
+        "token": "eyJpZCI6MjAzNjU2LCJpIjoyLCJxIjoiNDgwcCJ9",
+        "payload": {
+          "id": 203656,
+          "i": 2,
+          "q": "480p"
+        }
+      },
+      {
+        "quality": "480p",
+        "label": "mega",
+        "token": "eyJpZCI6MjAzNjU2LCJpIjozLCJxIjoiNDgwcCJ9",
+        "payload": {
+          "id": 203656,
+          "i": 3,
+          "q": "480p"
+        }
+      },
+      {
+        "quality": "720p",
+        "label": "odstream",
+        "token": "eyJpZCI6MjAzNjU2LCJpIjowLCJxIjoiNzIwcCJ9",
+        "payload": {
+          "id": 203656,
+          "i": 0,
+          "q": "720p"
+        }
+      },
+      {
+        "quality": "720p",
+        "label": "filedon",
+        "token": "eyJpZCI6MjAzNjU2LCJpIjoxLCJxIjoiNzIwcCJ9",
+        "payload": {
+          "id": 203656,
+          "i": 1,
+          "q": "720p"
+        }
+      },
+      {
+        "quality": "720p",
+        "label": "vidhide",
+        "token": "eyJpZCI6MjAzNjU2LCJpIjoyLCJxIjoiNzIwcCJ9",
+        "payload": {
+          "id": 203656,
+          "i": 2,
+          "q": "720p"
+        }
+      },
+      {
+        "quality": "720p",
+        "label": "mega",
+        "token": "eyJpZCI6MjAzNjU2LCJpIjozLCJxIjoiNzIwcCJ9",
+        "payload": {
+          "id": 203656,
+          "i": 3,
+          "q": "720p"
+        }
+      }
+    ],
+    "downloads": [
+      {
+        "format": "Mp4 360p",
+        "size": "32.9 MB",
+        "links": [
+          {
+            "host": "Filedon",
+            "url": "https://link.desustream.com/?id=Uk83OUt2T214S3VpS0ZVRndDV3NlYWNtWm9RbTYzZ2liRkdMeFdMMU5meXovUT09"
+          },
+          {
+            "host": "Pdrain",
+            "url": "https://link.desustream.com/?id=Uk83OUt2T214S3UwS0VFRnlDNndOcTBuWjVFZzR5QjRNMTJYNG12N1BQcXo="
+          },
+          {
+            "host": "Acefile",
+            "url": "https://link.desustream.com/?id=Uk83OUt2T214S3VsSWx3R3pTYW5lYWNtWnBSZ3Z6NC9MUWpudVI3eVZPYU03NUZrL2FKUUducjRGUUJpeGVOVmVFTE52VXpYdkx3YTFDMVRxQ01WaDRLeTRUR0JOdz09"
+          },
+          {
+            "host": "GoFile",
+            "url": "https://link.desustream.com/?id=Uk83OUt2T214S3VqTGw4SnlDL3NQcXRtTGQwTzJFSnZlM09XeXc9PQ=="
+          },
+          {
+            "host": "Mega",
+            "url": "https://link.desustream.com/?id=Uk83OUt2T214S3VwSkY0QmlpUzRlS0lnSlpkZzUxeDFabVNldUdqZ0tNV3gzcmxGeHFOeVdBUDdIUk1qNWV0b1dVYjZpMC84bE9zTzBWQUg4eTFudzl1d3FneVpiVzVNRHc9PQ=="
+          },
+          {
+            "host": "VikingFile",
+            "url": "https://link.desustream.com/?id=Uk83OUt2T214S3V5S0ZJSnlpMmtQcWdzWjVFZzR5QnJNMEM5NDIySEE3Q1V4cjA9"
+          }
+        ]
+      },
+      {
+        "format": "Mp4 480p",
+        "size": "98.2 MB",
+        "links": [
+          {
+            "host": "Filedon",
+            "url": "https://link.desustream.com/?id=Uk83OUt2T214S3VpS0ZVRndDV3NlYWNtWm9RbTYzZ2liQWl3K1UyNUk4cTU0dz09"
+          },
+          {
+            "host": "Pdrain",
+            "url": "https://link.desustream.com/?id=Uk83OUt2T214S3UwS0VFRnlDNndOcTBuWjVFZzR5QjRNMmlyMm02M0s4K04="
+          },
+          {
+            "host": "Acefile",
+            "url": "https://link.desustream.com/?id=Uk83OUt2T214S3VsSWx3R3pTYW5lYWNtWnBSZ3Z6NC9MUWpudVI3eFZPYU03NUZrL2FKUUducjRGUUJpeGVOVmVFTE52VXpYdkx3YTFDMVRxQ01TaVlLeTRUR0JOdz09"
+          },
+          {
+            "host": "GoFile",
+            "url": "https://link.desustream.com/?id=Uk83OUt2T214S3VqTGw4SnlDL3NQcXRtTGQwTzJFSnZlM09XeXc9PQ=="
+          },
+          {
+            "host": "Mega",
+            "url": "https://link.desustream.com/?id=Uk83OUt2T214S3VwSkY0QmlpUzRlS0lnSlpkZ3hVeDlUbDJWNm5EZ0hleWR5S0FsM3BWV1dSak9FVFpYMStWaGNoclJ1RXpXbVBnaTF6RlJ5d2xwK3NhdytHbXBhVmhVZGc9PQ=="
+          },
+          {
+            "host": "VikingFile",
+            "url": "https://link.desustream.com/?id=Uk83OUt2T214S3V5S0ZJSnlpMmtQcWdzWjVFZzR5QnJNMkxveDMrNVQraUJ5Skk9"
+          }
+        ]
+      },
+      {
+        "format": "Mp4 720p",
+        "size": "172.4 MB",
+        "links": [
+          {
+            "host": "Filedon",
+            "url": "https://link.desustream.com/?id=Uk83OUt2T214S3VpS0ZVRndDV3NlYWNtWm9RbTYzZ2lVbmVueWhPckFkdWU0QT09"
+          },
+          {
+            "host": "Pdrain",
+            "url": "https://link.desustream.com/?id=Uk83OUt2T214S3UwS0VFRnlDNndOcTBuWjVFZzR5QjRNMXV4dXhLWERmK3M="
+          },
+          {
+            "host": "Acefile",
+            "url": "https://link.desustream.com/?id=Uk83OUt2T214S3VsSWx3R3pTYW5lYWNtWnBSZ3Z6NC9MUWpudVI3d1ZPYU03NUZrL2FKUUducjRGUUJpeGVOVmVFTE52VXpYdkx3YTFDMVRxQ01SZzRLeTRUR0JOdz09"
+          },
+          {
+            "host": "GoFile",
+            "url": "https://link.desustream.com/?id=Uk83OUt2T214S3VqTGw4SnlDL3NQcXRtTGQwTzJFSnZlM09XeXc9PQ=="
+          },
+          {
+            "host": "Mega",
+            "url": "https://link.desustream.com/?id=Uk83OUt2T214S3VwSkY0QmlpUzRlS0lnSlpkZzdFTnFXa2VMM0hqZ0x2Tzl4NWxuK3BobUp6UGhDSElsNU13VWFoN1p1MHoya3RrOXJtWVIya3RCMC9TeXZDdWlTMDFwTFE9PQ=="
+          },
+          {
+            "host": "VikingFile",
+            "url": "https://link.desustream.com/?id=Uk83OUt2T214S3V5S0ZJSnlpMmtQcWdzWjVFZzR5QnJNMk9RN3hLeFNlNlA3Yzg9"
+          }
+        ]
+      },
+      {
+        "format": "Mp4 1080p",
+        "size": "368.7 MB",
+        "links": [
+          {
+            "host": "Filedon",
+            "url": "https://link.desustream.com/?id=Uk83OUt2T214S3VpS0ZVRndDV3NlYWNtWm9RbTYzZ2lSR1RtdUJPUEtiMld2QT09"
+          },
+          {
+            "host": "Pdrain",
+            "url": "https://link.desustream.com/?id=Uk83OUt2T214S3UwS0VFRnlDNndOcTBuWjVFZzR5QjRNM3lyd0VLaUV1NkM="
+          },
+          {
+            "host": "Acefile",
+            "url": "https://link.desustream.com/?id=Uk83OUt2T214S3VsSWx3R3pTYW5lYWNtWnBSZ3Z6NC9MUWpudVI3M1ZPYU03NUZrL2FKUUducjRGUUJpeGVOVmVFTE52VXpYdkx3YTFDMVRxQ01YZ1lyeXZIR2NjenM9"
+          },
+          {
+            "host": "GoFile",
+            "url": "https://link.desustream.com/?id=Uk83OUt2T214S3VqTGw4SnlDL3NQcXRtTGQwTzJFSnZlM09XeXc9PQ=="
+          },
+          {
+            "host": "Mega",
+            "url": "https://link.desustream.com/?id=Uk83OUt2T214S3VwSkY0QmlpUzRlS0lnSlpkZy8wdGNSRXE5dUd2Z0N2R3l2NHRXNEtOaVd4ckRPU1pBekxsY0tCN2h0V3ZRaWRNTHVYWWsweHQ1eTUrYXZ4akRVRU5IQ3c9PQ=="
+          },
+          {
+            "host": "VikingFile",
+            "url": "https://link.desustream.com/?id=Uk83OUt2T214S3V5S0ZJSnlpMmtQcWdzWjVFZzR5QnJNMkd0eWt5bUFlZkF6NU09"
+          }
+        ]
+      },
+      {
+        "format": "MKV 480p",
+        "size": "97.5 MB",
+        "links": [
+          {
+            "host": "Filedon",
+            "url": "https://link.desustream.com/?id=Uk83OUt2T214S3VpS0ZVRndDV3NlYWNtWm9RbTYzZ2lSSFNGekJPMUtmbkF2QT09"
+          },
+          {
+            "host": "Pdrain",
+            "url": "https://link.desustream.com/?id=Uk83OUt2T214S3UwS0VFRnlDNndOcTBuWjVFZzR5QjRNMnFkNzBDSk1OeU4="
+          },
+          {
+            "host": "Acefile",
+            "url": "https://link.desustream.com/?id=Uk83OUt2T214S3VsSWx3R3pTYW5lYWNtWnBSZ3Z6NC9MUWptdlI3elZPYU03NUZrL2FKUUducjRGUUJpeGVOVmVFTE52VXpYdkx3YTFDMVRxQ05MMnNUMjlHeUJMbUpKTUE9PQ=="
+          },
+          {
+            "host": "GoFile",
+            "url": "https://link.desustream.com/?id=Uk83OUt2T214S3VqTGw4SnlDL3NQcXRtTGQwby9HQlVSQU9tMmc9PQ=="
+          },
+          {
+            "host": "Mega",
+            "url": "https://link.desustream.com/?id=Uk83OUt2T214S3VwSkY0QmlpUzRlS0lnSlpkZ3pXMU1aV09WNm1IZ1Z2aWgwWWhFb1BNT0J5ZkhNVGhqK2RKT1VtRHI1V2Zjb2NnTnpXWTI4UVIzK2VTdXREYVdXbmx0Qnc9PQ=="
+          },
+          {
+            "host": "VikingFile",
+            "url": "https://link.desustream.com/?id=Uk83OUt2T214S3V5S0ZJSnlpMmtQcWdzWjVFZzR5QnJNd0N1MUJLd0E5dUwvN1E9"
+          }
+        ]
+      },
+      {
+        "format": "MKV 720p",
+        "size": "201.6 MB",
+        "links": [
+          {
+            "host": "Filedon",
+            "url": "https://link.desustream.com/?id=Uk83OUt2T214S3VpS0ZVRndDV3NlYWNtWm9RbTYzZ2llVlNzNzNPR0w4TEJ1QT09"
+          },
+          {
+            "host": "Pdrain",
+            "url": "https://link.desustream.com/?id=Uk83OUt2T214S3UwS0VFRnlDNndOcTBuWjVFZzR5QjRNMVNyekZqMEUvMis="
+          },
+          {
+            "host": "Acefile",
+            "url": "https://link.desustream.com/?id=Uk83OUt2T214S3VsSWx3R3pTYW5lYWNtWnBSZ3Z6NC9MUWptdlJuN1ZPYU03NUZrL2FKUUducjRGUUJpeGVOVmVFTE52VXpYdkx3YTFDMVRxQ05MMnNUMS9teUJMbUpKTUE9PQ=="
+          },
+          {
+            "host": "GoFile",
+            "url": "https://link.desustream.com/?id=Uk83OUt2T214S3VqTGw4SnlDL3NQcXRtTGQwby9HQlVSQU9tMmc9PQ=="
+          },
+          {
+            "host": "Mega",
+            "url": "https://link.desustream.com/?id=Uk83OUt2T214S3VwSkY0QmlpUzRlS0lnSlpkZy8xZFVYMW05MUc3Z0k4R2R3S284KzZwWFZ3T2dFVGNsd3RoTGEzcUt1bW5BdXNGZWdXVXNyVTVSMXNYMXRXMkVZanRCRXc9PQ=="
+          },
+          {
+            "host": "VikingFile",
+            "url": "https://link.desustream.com/?id=Uk83OUt2T214S3V5S0ZJSnlpMmtQcWdzWjVFZzR5QnJNMXlkNEh5b0t0RFA3Ync9"
+          }
+        ]
+      },
+      {
+        "format": "MKV 1080p",
+        "size": "617.6 MB",
+        "links": [
+          {
+            "host": "Filedon",
+            "url": "https://link.desustream.com/?id=Uk83OUt2T214S3VpS0ZVRndDV3NlYWNtWm9RbTYzZ2lWbEdjdjJXdENQMks0QT09"
+          },
+          {
+            "host": "Pdrain",
+            "url": "https://link.desustream.com/?id=Uk83OUt2T214S3UwS0VFRnlDNndOcTBuWjVFZzR5QjRNM0dlL1gyUFN2cTU="
+          },
+          {
+            "host": "Acefile",
+            "url": "https://link.desustream.com/?id=Uk83OUt2T214S3VsSWx3R3pTYW5lYWNtWnBSZ3Z6NC9MUWptdlJuNlZPYU03NUZrL2FKUUducjRGUUJpeGVOVmVFTE52VXpYdkx3YTFDMVRxQ05MMnNUei9HVEJjeUpQTFFnPQ=="
+          },
+          {
+            "host": "GoFile",
+            "url": "https://link.desustream.com/?id=Uk83OUt2T214S3VqTGw4SnlDL3NQcXRtTGQwby9HQlVSQU9tMmc9PQ=="
+          },
+          {
+            "host": "Mega",
+            "url": "https://link.desustream.com/?id=Uk83OUt2T214S3VwSkY0QmlpUzRlS0lnSlpkZzJrZGNMbVdWOVdEZ0Q4NjF4TGxIMTVZUUhodmhBMjhnOHNoY0xSN0U0WC9MdFBrWWwwUXIwRDl5M092M3ZRbUFaVGRKQnc9PQ=="
+          },
+          {
+            "host": "VikingFile",
+            "url": "https://link.desustream.com/?id=Uk83OUt2T214S3V5S0ZJSnlpMmtQcWdzWjVFZzR5QnJNd0c3N2gydU1zTE41STA9"
+          }
+        ]
+      }
+    ],
+    "allEpisodes": [
+      {
+        "slug": "tenslem-s4-episode-21-sub-indo",
+        "label": "Episode 21"
+      },
+      {
+        "slug": "tenslem-s4-episode-20-sub-indo",
+        "label": "Episode 20"
+      },
+      {
+        "slug": "tenslem-s4-episode-19-sub-indo",
+        "label": "Episode 19"
+      },
+      {
+        "slug": "tenslem-s4-episode-18-sub-indo",
+        "label": "Episode 18"
+      },
+      {
+        "slug": "tenslem-s4-episode-17-sub-indo",
+        "label": "Episode 17"
+      },
+      {
+        "slug": "tenslem-s4-episode-16-sub-indo",
+        "label": "Episode 16"
+      },
+      {
+        "slug": "tenslem-s4-episode-15-sub-indo",
+        "label": "Episode 15"
+      },
+      {
+        "slug": "tenslem-s4-episode-14-sub-indo",
+        "label": "Episode 14"
+      },
+      {
+        "slug": "tenslem-s4-episode-13-sub-indo",
+        "label": "Episode 13"
+      },
+      {
+        "slug": "tenslem-s4-episode-12-sub-indo",
+        "label": "Episode 12"
+      },
+      {
+        "slug": "tenslem-s4-episode-11-sub-indo",
+        "label": "Episode 11"
+      },
+      {
+        "slug": "tenslem-s4-episode-10-sub-indo",
+        "label": "Episode 10"
+      },
+      {
+        "slug": "tenslem-s4-episode-9-sub-indo",
+        "label": "Episode 9"
+      },
+      {
+        "slug": "tenslem-s4-episode-8-sub-indo",
+        "label": "Episode 8"
+      },
+      {
+        "slug": "tenslem-s4-episode-7-sub-indo",
+        "label": "Episode 7"
+      },
+      {
+        "slug": "tenslem-s4-episode-6-sub-indo",
+        "label": "Episode 6"
+      },
+      {
+        "slug": "tenslem-s4-episode-5-sub-indo",
+        "label": "Episode 5"
+      },
+      {
+        "slug": "tenslem-s4-episode-4-sub-indo",
+        "label": "Episode 4"
+      },
+      {
+        "slug": "tenslem-s4-episode-3-sub-indo",
+        "label": "Episode 3"
+      },
+      {
+        "slug": "tenslem-s4-episode-2-sub-indo",
+        "label": "Episode 2"
+      },
+      {
+        "slug": "tenslem-s4-episode-1-sub-indo",
+        "label": "Episode 1"
+      }
+    ]
+  }
+}

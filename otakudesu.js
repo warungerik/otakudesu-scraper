@@ -1,3 +1,7 @@
+/**
+ * created by warungerik.com
+ */
+
 const BASE = 'https://otakudesu.blog';
 const UA = { 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36' };
 
@@ -66,7 +70,7 @@ export async function getAnime(slug) {
     info[k.trim()] = v.replace(/<[^>]+>/g, '').trim();
     return '';
   });
-  const genres = [...(im[1] || '').matchAll(/\/genres\/([^/]+)\/">([^<]+)/g)].map((g) => g[2]);
+  const genres = [...(im[1] || '').matchAll(/\/genres\/[^/]+\/"[^>]*>([^<]+)/g)].map((g) => g[1]);
   const cover = (html.match(/<div class='fotoanime'[\s\S]*?<img[^>]+src="([^"]+)/) || [])[1] || '';
 
   const episodes = [];
@@ -94,7 +98,7 @@ export async function getEpisode(slug) {
     try {
       const eh = await (await fetch(iframe, { headers: { Referer: `${BASE}/`, ...UA } })).text();
       video = (eh.match(/videoURL\s*=\s*"([^"]+)"/) || [])[1] || '';
-    } catch {}
+    } catch { }
   }
 
   const servers = [];
@@ -139,5 +143,10 @@ export async function resolveMirror(payload, nonce) {
 
 if (process.argv[1]?.endsWith('otakudesu.js')) {
   const home = await getHome();
-  console.log('Home ongoing:', home.ongoing.length);
+  const list = await getList('ongoing');
+  const found = await search('slime');
+  const animeSlug = found[0]?.slug || home.ongoing[0]?.slug;
+  const anime = await getAnime(animeSlug);
+  const ep = await getEpisode(anime.episodes[0]?.slug);
+  console.log(JSON.stringify({ home, listCount: list.length, found, anime, ep }, null, 2));
 }
