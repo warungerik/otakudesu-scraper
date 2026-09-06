@@ -86,7 +86,8 @@ createApp({
         }),
         { rootMargin: '-70px 0px -60% 0px' }
       );
-      document.querySelectorAll('#mulai, #fungsi, #kode, .card[id]').forEach((el) => obs.observe(el));
+      document.querySelectorAll('#mulai, #fungsi, #kode, #donasi, .card[id]').forEach((el) => obs.observe(el));
+      if (window.lucide) window.lucide.createIcons();
     });
 
     return { open, active, copiedAll, source, funcs, quickStart, scroll, copyText, copyFull };

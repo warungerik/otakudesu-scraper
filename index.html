@@ -12,6 +12,7 @@
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%E2%9A%A1%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://unpkg.com" crossorigin>
 <script defer src="https://unpkg.com/vue@3/dist/vue.global.prod.js"></script>
+<script defer src="https://unpkg.com/lucide@latest"></script>
 <link rel="stylesheet" href="docs.css">
 <style>[v-cloak]{display:none}.menu-btn.x span:nth-child(1){transform:translateY(6px) rotate(45deg)}.menu-btn.x span:nth-child(2){opacity:0}.menu-btn.x span:nth-child(3){transform:translateY(-6px) rotate(-45deg)}</style>
 </head>
@@ -19,11 +20,12 @@
 <div id="app" v-cloak>
   <div class="bg-orb"></div>
   <header>
-    <a href="#mulai" @click.prevent="scroll('mulai')" class="brand"><span class="dot"></span>Otakudesu Scraper<span class="ver">v1</span></a>
+    <a href="#mulai" @click.prevent="scroll('mulai')" class="brand"><i data-lucide="zap" class="brand-ico"></i>Otakudesu Scraper<span class="ver">v1</span></a>
     <nav class="topnav" aria-label="Navigasi utama">
-      <a href="#fungsi" @click.prevent="scroll('fungsi')">Fungsi</a>
-      <a href="#kode" @click.prevent="scroll('kode')">Kode</a>
-      <button type="button" class="btn-copy-main" @click="copyFull">{{ copiedAll ? 'Disalin' : 'Salin Semua Kode' }}</button>
+      <a href="#fungsi" @click.prevent="scroll('fungsi')"><i data-lucide="box"></i>Fungsi</a>
+      <a href="#kode" @click.prevent="scroll('kode')"><i data-lucide="code-2"></i>Kode</a>
+      <a class="coffee" href="https://warungerik.com/payment" target="_blank" rel="noopener"><i data-lucide="coffee"></i>Buy Me A Coffee</a>
+      <button type="button" class="btn-copy-main" @click="copyFull"><i data-lucide="clipboard-copy"></i>{{ copiedAll ? 'Disalin' : 'Salin Semua Kode' }}</button>
     </nav>
     <button type="button" class="menu-btn" @click="open = !open" :class="{ x: open }" aria-label="Buka menu" :aria-expanded="open"><span></span><span></span><span></span></button>
   </header>
@@ -75,6 +77,14 @@
           </div>
           <pre class="full"><code>{{ source }}</code></pre>
         </div>
+      </section>
+      <section id="donasi" class="coffee-card">
+        <i data-lucide="coffee"></i>
+        <div>
+          <h2>Terbantu?</h2>
+          <p>Traktir kopi biar update terus.</p>
+        </div>
+        <a href="https://warungerik.com/payment" target="_blank" rel="noopener">warungerik.com/payment</a>
       </section>
     </main>
   </div>
